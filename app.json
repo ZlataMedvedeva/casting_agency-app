@@ -1,0 +1,76 @@
+{
+  "expo": {
+    "name": "casting",
+    "slug": "kast-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "Приложению требуется доступ к вашим фото для загрузки портфолио.",
+        "NSCameraUsageDescription": "Приложению требуется доступ к камере для создания фото/видео.",
+        "NSMicrophoneUsageDescription": "Приложению требуется доступ к микрофону для записи видео."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECORD_AUDIO"
+      ],
+      "package": "com.zlata06.kastapp"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      "expo-font",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Приложению требуется доступ к вашим фото для загрузки портфолио.",
+          "cameraPermission": "Приложению требуется доступ к камере для создания фото/видео."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "d0e8995b-df31-4529-9bc8-6dcd1bac6246"
+      }
+    },
+    "fonts": [
+      "./assets/fonts/Oktyabrina-script.ttf",
+      "./assets/fonts/Arkhip-Regular.ttf"
+    ]
+  }
+}
